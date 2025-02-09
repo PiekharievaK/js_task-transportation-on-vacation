@@ -12,12 +12,12 @@ function calculateRentalCost(days) {
 
   const price = days * BASE_PRICE;
 
-  if (days >= MIDDLE_TERM && days < LONG_TERM) {
-    return price - MIDDLE_TERM_DISCOUNT;
-  }
-
   if (days >= LONG_TERM) {
     return price - LONG_TERM_DISCOUNT;
+  }
+
+  if (days >= MIDDLE_TERM) {
+    return price - MIDDLE_TERM_DISCOUNT;
   }
 
   return price;
